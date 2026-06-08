@@ -201,35 +201,13 @@ span{
 }
 
 .typing-text {
-    display: inline-block;
     font-size: 34px;
     font-weight: 600;
-    margin-top: -10px;
-    position: relative;
-     white-space: nowrap;  
-     overflow: hidden;
-}
-
-.typing-text span {
-    position: absolute;
-    opacity: 0;
     margin-left: 10px;
-    color: #2b7a78;
-    animation: display-text 8s linear infinite;
-    animation-delay: calc(3s * var(--i));
-
 }
 
-@keyframes display-text {
-    0% {
-        opacity: 0;
-    }
-    10%, 30% {
-        opacity: 1;
-    }
-    40%, 100% {
-        opacity: 0;
-    }
+#typing {
+    color: #2b7a78;
 }
 
 .ski-img{
@@ -752,10 +730,155 @@ nav a.active{
         font-size: 1.2rem;
     }
 }
+
+    }
+}
+/* ================= MOBILE FIX ================= */
 @media (max-width: 768px) {
 
-    .but {
-        padding: 6px 10px;   /* smaller */
-        font-size: 12px;
+    body {
+        padding-top: 70px;
     }
+
+    header {
+        height: 70px;
+        padding: 10px;
+    }
+
+    .logo {
+        font-size: 24px;
+    }
+
+    
+    .home {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+        height: auto;
+    }
+
+    .home-con h1 {
+        font-size: 28px;
+    }
+
+    .home-con h3 {
+        font-size: 18px;
+    }
+
+    .home-con p {
+        font-size: 14px;
+    }
+
+    .home-img img {
+        width: 120px;
+    }
+
+   
+    .social-icons a {
+        width: 2.5rem;
+        height: 2.5rem;
+        font-size: 1.2rem;
+        margin: 10px;
+    }
+
+    
+    .ski-img {
+        gap: 20px;
+    }
+
+    .ski-img img {
+        width: 50px;
+    }
+
+   
+    .proj {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .pro1, .pro2, .pro3 {
+        padding: 20px;
+    }
+
+    .pro1 h2, .pro2 h2, .pro3 h2 {
+        font-size: 22px;
+    }
+
+    .pro1 img, .pro2 img, .pro3 img {
+        width: 100%;
+    }
+
+    .pro1 p, .pro2 p, .pro3 p {
+        font-size: 14px;
+    }
+
+    
+    .contact {
+        height: auto;
+        padding: 20px;
+    }
+
+    .contact-left h1 {
+        font-size: 28px;
+    }
+
+    .contact-left p {
+        font-size: 14px;
+    }
+
+    .card {
+        padding: 15px;
+        max-width: 100%;
+    }
+
+   
+    .but {
+        font-size: 12px;
+        padding: 8px 12px;
+    }
+}
+@media (max-width: 768px) {
+
+    .cert-img img {
+        width: 100%;       
+        max-width: 350px;  
+        height: auto;
+        display: block;
+        margin: 0 auto;    
+        border-radius: 10px;
+    }
+
+    .cnav {
+        padding: 15px;
+    }
+
+    .cert-img h1 {
+        font-size: 22px;
+        text-align: center;
+    }
+
+    .cert-img h2 {
+        font-size: 18px;
+    }
+
+    .cert-img p {
+        font-size: 14px;
+        text-align: justify;
+    }
+}
+@media (max-width: 768px) {
+
+    .ach-img img {
+        width: 80%;     
+        height: auto;   
+        border-radius: 8px;
+    }
+
+    .anav {
+        gap: 10px;     
+    }
+}
+.card {
+    word-break: break-word;     
+    overflow-wrap: break-word;  
 }
