@@ -41,35 +41,38 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-const words = ["Full Stack Developer", "Software Developer", "Designer"];
-let i = 0;
-let j = 0;
-let currentWord = "";
-let isDeleting = false;
+document.addEventListener("DOMContentLoaded", function () {
 
-const typing = document.getElementById("typing");
+    const words = ["Full Stack Developer", "Software Developer", "Designer"];
+    let i = 0;
+    let j = 0;
+    let currentWord = "";
+    let isDeleting = false;
 
-function type() {
-    currentWord = words[i];
+    const typing = document.getElementById("typing");
 
-    if (isDeleting) {
-        typing.textContent = currentWord.substring(0, j--);
-    } else {
-        typing.textContent = currentWord.substring(0, j++);
+    function type() {
+        currentWord = words[i];
+
+        if (isDeleting) {
+            typing.textContent = currentWord.substring(0, j--);
+        } else {
+            typing.textContent = currentWord.substring(0, j++);
+        }
+
+        if (!isDeleting && j === currentWord.length) {
+            isDeleting = true;
+            setTimeout(type, 1000);
+            return;
+        }
+
+        if (isDeleting && j === 0) {
+            isDeleting = false;
+            i = (i + 1) % words.length;
+        }
+
+        setTimeout(type, isDeleting ? 50 : 100);
     }
 
-    if (!isDeleting && j === currentWord.length) {
-        isDeleting = true;
-        setTimeout(type, 1000);
-        return;
-    }
-
-    if (isDeleting && j === 0) {
-        isDeleting = false;
-        i = (i + 1) % words.length;
-    }
-
-    setTimeout(type, isDeleting ? 50 : 100);
-}
-
-type();
+    type();
+});
