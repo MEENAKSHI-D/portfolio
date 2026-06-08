@@ -749,7 +749,7 @@ nav a.active{
         font-size: 24px;
     }
 
-    /* HOME SECTION */
+    
     .home {
         flex-direction: column;
         gap: 20px;
@@ -773,7 +773,7 @@ nav a.active{
         width: 120px;
     }
 
-    /* SOCIAL ICONS */
+   
     .social-icons a {
         width: 2.5rem;
         height: 2.5rem;
@@ -781,7 +781,7 @@ nav a.active{
         margin: 10px;
     }
 
-    /* SKILLS IMAGES */
+    
     .ski-img {
         gap: 20px;
     }
@@ -790,7 +790,7 @@ nav a.active{
         width: 50px;
     }
 
-    /* PROJECT CARDS */
+   
     .proj {
         flex-direction: column;
         gap: 20px;
@@ -812,7 +812,7 @@ nav a.active{
         font-size: 14px;
     }
 
-    /* CONTACT SECTION */
+    
     .contact {
         height: auto;
         padding: 20px;
@@ -831,7 +831,7 @@ nav a.active{
         max-width: 100%;
     }
 
-    /* BUTTON */
+   
     .but {
         font-size: 12px;
         padding: 8px 12px;
@@ -840,11 +840,11 @@ nav a.active{
 @media (max-width: 768px) {
 
     .cert-img img {
-        width: 100%;       /* full width */
-        max-width: 350px;  /* prevent too large */
+        width: 100%;       
+        max-width: 350px;  
         height: auto;
         display: block;
-        margin: 0 auto;    /* center */
+        margin: 0 auto;    
         border-radius: 10px;
     }
 
