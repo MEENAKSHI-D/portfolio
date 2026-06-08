@@ -43,7 +43,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 document.addEventListener("DOMContentLoaded", function () {
 
-    const words = ["Full Stack Developer", "Software Developer", "Designer"];
+    const words = ["Full Stack Developer", "Problem Solver", "Designer"];
     let i = 0;
     let j = 0;
     let currentWord = "";
